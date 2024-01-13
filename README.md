@@ -10,8 +10,8 @@ A major source of frustration when dealing with complex calculations is the time
 * System of Linear Equations of Second and Third Order
 * Polynomial Equations of Second and Third Order
 
-![Sample Equation](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Equation%20Image.jpeg?raw=true)
-*Sample Image of a Third Order Equation
+![Sample Equation](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Equation%20Image.jpeg?raw=true)  
+*Sample Image of a Third Order Equation*  
 
 ## Overview
 All computations are done locally using Python, without the need to relay data to a server.  
@@ -34,7 +34,7 @@ There are 75 different mathematical symbols present in the dataset. Out of these
 The dataset consists of 165,000  images of size 45 x 45 from 18 different classes. A train to test split of 0.2 was performed for training the model.
 
 ![Dataset Sample](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/dataset_sample.png?raw=true)
-*Samples from the Dataset*  
+
 
 ## Detailed Explanation
 
@@ -47,17 +47,17 @@ The dataset consists of 165,000  images of size 45 x 45 from 18 different classe
 * The dataset characters have a size of 45x45 pixels. To normalize, the characters binarized and zero padded and then finally scaled to the scale of 45x45 pixels.
 
 ![Image Pre Processing Steps](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Pre-Processing-Pipeline.png?raw=true)
-*Image Pre Processing Pipeline*  
+
 
 2. **Network Structure**: The structure of the model was inspired from AlexNet and consists of two convolutional layers, 2 max pooling layers, 3 dropout layers, and 4 fully connected layers with a total of 6.7 M trainable parameters.
 
 ![Network Architecture Visualization](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Network_Architecture.png?raw=true)
-*Network Architecture*  
+
 
 4. **Training** Adam Optimizer with cross entropy loss function was used to train the model in 50 iterations with a test accuracy of 95.72% and test loss of 0.3325.
 
 ![Curves](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Accuracy_Curves.png?raw=true)
-*Loss and Accuracy curves*  
+
 
 ## Conclusion and results
 
