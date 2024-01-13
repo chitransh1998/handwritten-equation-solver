@@ -9,7 +9,9 @@ To develop system that can effectively detect and recognize handwritten equation
 A major source of frustration when dealing with complex calculations is the time and effort in entering equations into a calculator or a computer manually which is also prone to human error. In this project, a image based equation solver capable of solving:  
 * System of Linear Equations of Second and Third Order
 * Polynomial Equations of Second and Third Order
-  
+
+[Sample Equation](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Equation%20Image.jpeg?raw=true)
+
 ## Overview
 All computations are done locally using Python, without the need to relay data to a server.  
 The high level approach for acquiring and solving equations is below:
@@ -30,6 +32,8 @@ The DATA from [CHROME](https://www.isical.ac.in/~crohme/CROHME_data.html)
 There are 75 different mathematical symbols present in the dataset. Out of these 75 classes we require only 18 classes for our present machine learning model. The pixel arrays of the images in the dataset are normalized for the size of 45x45.     
 The dataset consists of 165,000  images of size 45 x 45 from 18 different classes. A train to test split of 0.2 was performed for training the model.
 
+[Dataset Sample](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/dataset_sample.png?raw=true)
+
 ## Detailed Explanation
 
 1. **Image Pre-Processing and Detection**: The objective of pre-processing is to take the captured image and segment the characters using the OpenCv library and python.
@@ -40,13 +44,20 @@ The dataset consists of 165,000  images of size 45 x 45 from 18 different classe
 * After the characters are segmented, they need to be normalized to the dataset of characters. The objective of character normalization is to make any character match as much as possible to the dataset.
 * The dataset characters have a size of 45x45 pixels. To normalize, the characters binarized and zero padded and then finally scaled to the scale of 45x45 pixels.
 
+[Image Pre Processing Steps](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Pre-Processing-Pipeline.png?raw=true)
+
 2. **Network Structure**: The structure of the model was inspired from AlexNet and consists of two convolutional layers, 2 max pooling layers, 3 dropout layers, and 4 fully connected layers with a total of 6.7 M trainable parameters.
-3. **Training** Adam Optimizer with cross entropy loss function was used to train the model in 50 iterations with a test accuracy of 95.72% and test loss of 0.3325.
+
+[Network Architecture Visualization](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Network_Architecture.png?raw=true)
+
+4. **Training** Adam Optimizer with cross entropy loss function was used to train the model in 50 iterations with a test accuracy of 95.72% and test loss of 0.3325.
+
+[Curves](https://github.com/chitransh1998/handwritten-equation-solver/blob/main/Accuracy_Curves.png?raw=true)
 
 ## Conclusion and results
 
 * A GUI for efficient user to model interaction and presentation was developed.
 * Improvements towards robustness of model can be added like working in variable lighting conditions and challenging backgrounds based on requirements.
 * Project can be extended to making image based circuit solver and for solving differential equations and other more complex mathematical equations.
-* 
+  
 
