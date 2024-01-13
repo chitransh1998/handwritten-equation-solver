@@ -65,4 +65,6 @@ The dataset consists of 165,000  images of size 45 x 45 from 18 different classe
 * Improvements towards robustness of model can be added like working in variable lighting conditions and challenging backgrounds based on requirements.
 * Project can be extended to making image based circuit solver and for solving differential equations and other more complex mathematical equations.
   
+## Usage
 
+Run the `main.py` file in python to test the model. Make sure all requisite libraries are installed before running the code.
